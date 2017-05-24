@@ -38,7 +38,8 @@
     "pngparse": "^2.0.1",
     "ws": "^1.1.1",
     "xmldom": "^0.1.19",
-    "socket.io": "1.4.8"
+    "socket.io": "2.0.0",
+    "snyk": "^1.30.1"
   },
   "directories": {
     "example": "examples",
@@ -51,7 +52,9 @@
     "test": "grunt test",
     "test-examples": "grunt mochaTest:examples && karma start test/examples/karma.conf.js",
     "test-tcp": "grunt mochaTest:tcp",
-    "publish": "grunt build"
+    "publish": "grunt build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -67,5 +70,6 @@
     "roslibjs",
     "robot"
   ],
-  "author": "Robot Webtools Team <robot-web-tools@googlegroups.com> (http://robotwebtools.org)"
+  "author": "Robot Webtools Team <robot-web-tools@googlegroups.com> (http://robotwebtools.org)",
+  "snyk": true
 }
